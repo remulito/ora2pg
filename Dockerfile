@@ -25,8 +25,8 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/o
  
 RUN curl -L https://cpan.metacpan.org/authors/id/Z/ZA/ZARQUON/DBD-Oracle-1.76.tar.gz | (cd /tmp && tar -zxvf -) && mv /tmp/DBD-Ora* /tmp/DBD-Oracle \
     && cd /tmp/DBD-Oracle && perl Makefile.PL -l && make && make install \
-    && mkdir /data
- 
+    && mkdir /data \
+    && curl -L -o /tmp/ora2pg.zip https://github.com/darold/ora2pg/archive/v19.1.zip && (cd /tmp && unzip ora2pg.zip && rm -f ora2pg.zip) && mv /tmp/ora2pg* /tmp/ora2pg && (cd /tmp/ora2pg && perl Makefile.PL && make && make install) \
+    && rm -rf /tmp/DBD-Oracle && rm -rf /tmp/ora2pg
 VOLUME /data
  
-RUN curl -L -o /tmp/ora2pg.zip https://github.com/darold/ora2pg/archive/v19.1.zip && (cd /tmp && unzip ora2pg.zip && rm -f ora2pg.zip) && mv /tmp/ora2pg* /tmp/ora2pg && (cd /tmp/ora2pg && perl Makefile.PL && make && make install)
