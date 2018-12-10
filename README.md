@@ -1,7 +1,7 @@
 # ora2pg
 ora2pg docker image
 
-##Here's a basic instruction for getting started.
+## Here's a basic instruction for getting started.
 
 1. Create a volume for your container
 2. Go right to bash of the container and make sure to mount the volume (replace <host_volume_dir> with actual dir)
