@@ -6,7 +6,7 @@ ora2pg docker image
 1. Create a volume for your container
 2. Go right to bash of the container and make sure to mount the volume (replace <host_volume_dir> with actual dir)
 ```bash
-docker run -i -t --rm --privileged=true -v <host_volume_dir>:/data --name ora2pg xeranas/ora2pg /bin/bash
+docker run -i -t --rm --privileged=true -v <host_volume_dir>:/data --name ora2pg remulito/ora2pg /bin/bash
 ```
 3. Navigate to volume directory 
 ```bash
