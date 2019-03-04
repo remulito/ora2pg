@@ -1,5 +1,5 @@
 # ora2pg docker image
-Image with ora2pg 19.1 and Oracle Instant Client 12.2.0.1
+Image with ora2pg and Oracle Instant Client 12.2.0.1
 
 ## Here's a basic instruction for getting started.
 
